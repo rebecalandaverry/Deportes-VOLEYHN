@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -326,7 +327,7 @@
             transform: scale(1.07);
         }
 
-        /* FRASE DESTACADA */
+        /* FRASE DESTACADA Y OPINIONES */
 
         .quote {
             padding: 90px 20px;
@@ -361,6 +362,59 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 700;
+        }
+
+        /* NUEVAS OPINIONES */
+
+        .opiniones-grid {
+            width: 90%;
+            max-width: 1170px;
+            margin: 45px auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .opinion-card {
+            background: rgba(255, 255, 255, .09);
+            border: 1px solid rgba(255, 255, 255, .18);
+            border-bottom: 3px solid #f5c542;
+            padding: 28px 24px;
+            text-align: left;
+            transition: transform .3s, background .3s;
+        }
+
+        .opinion-card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, .15);
+        }
+
+        .opinion-card .estrellas {
+            color: #f5c542;
+            font-size: 20px;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+
+        .opinion-card blockquote {
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.8;
+            margin: 0 0 20px;
+            color: #f0f4fa;
+        }
+
+        .opinion-card h3 {
+            color: #f5c542;
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+        }
+
+        .opinion-card span {
+            color: #d1dbea;
+            font-size: 12px;
         }
 
         /* PIE DE PÁGINA */
@@ -423,6 +477,10 @@
             }
 
             .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .opiniones-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
@@ -516,6 +574,11 @@
             .quote {
                 padding: 70px 20px;
             }
+
+            .opiniones-grid {
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -585,10 +648,11 @@
                 <p>
                     Pasión por el voleibol hondureño. Un deporte que
                     reúne talento, esfuerzo y trabajo en equipo dentro
-                    y fuera de la cancha. <marquee behavior="scroll" direction="left" scrollamount="6"
-         style="background:#1EC6B6; color:#fff; font-size:20px; padding:8px;">
-        🏐BIENVENIDOS A SABER SOBRE EL VOLEY🏐
-</marquee> 
+                    y fuera de la cancha.
+                    <marquee behavior="scroll" direction="left" scrollamount="6"
+                        style="background:#1EC6B6; color:#fff; font-size:20px; padding:8px;">
+                        🏐BIENVENIDOS A SABER SOBRE EL VOLEY🏐
+                    </marquee>
                 </p>
 
                 <a class="btn" href="#voleibol">
@@ -758,6 +822,102 @@
 
             <p>Voleibol Honduras</p>
 
+            <!-- OPINIONES ADICIONALES -->
+
+            <div class="opiniones-grid">
+
+                <article class="opinion-card">
+                    <div class="estrellas" aria-label="5 estrellas">
+                        ★★★★★
+                    </div>
+
+                    <blockquote>
+                        “El voleibol es un deporte que nos enseña a confiar
+                        en nuestros compañeros y a nunca rendirnos ante
+                        los desafíos.”
+                    </blockquote>
+
+                    <h3>Pasión por el deporte</h3>
+                    <span>Trabajo en equipo</span>
+                </article>
+
+                <article class="opinion-card">
+                    <div class="estrellas" aria-label="5 estrellas">
+                        ★★★★★
+                    </div>
+
+                    <blockquote>
+                        “Cada entrenamiento es una oportunidad para mejorar,
+                        aprender nuevas técnicas y dar lo mejor de nosotros
+                        dentro de la cancha.”
+                    </blockquote>
+
+                    <h3>Esfuerzo y dedicación</h3>
+                    <span>Disciplina deportiva</span>
+                </article>
+
+                <article class="opinion-card">
+                    <div class="estrellas" aria-label="5 estrellas">
+                        ★★★★★
+                    </div>
+
+                    <blockquote>
+                        “Lo más bonito del voleibol es que todos tenemos
+                        un papel importante y juntos podemos alcanzar
+                        nuestras metas.”
+                    </blockquote>
+
+                    <h3>Unión y compañerismo</h3>
+                    <span>Espíritu de equipo</span>
+                </article>
+
+                <article class="opinion-card">
+                    <div class="estrellas" aria-label="5 estrellas">
+                        ★★★★★
+                    </div>
+
+                    <blockquote>
+                        “Practicar voleibol ayuda a desarrollar la
+                        responsabilidad, el respeto y la confianza
+                        en nuestras propias habilidades.”
+                    </blockquote>
+
+                    <h3>Crecer y aprender</h3>
+                    <span>Desarrollo personal</span>
+                </article>
+
+                <article class="opinion-card">
+                    <div class="estrellas" aria-label="5 estrellas">
+                        ★★★★★
+                    </div>
+
+                    <blockquote>
+                        “Ganar es emocionante, pero aprender de cada partido
+                        y apoyar a nuestros compañeros es lo que realmente
+                        nos hace mejores jugadores.”
+                    </blockquote>
+
+                    <h3>Aprender de cada partido</h3>
+                    <span>Respeto y superación</span>
+                </article>
+
+                <article class="opinion-card">
+                    <div class="estrellas" aria-label="5 estrellas">
+                        ★★★★★
+                    </div>
+
+                    <blockquote>
+                        “El voleibol hondureño representa entusiasmo,
+                        talento y ganas de seguir creciendo en el deporte
+                        con orgullo y dedicación.”
+                    </blockquote>
+
+                    <h3>Orgullo hondureño</h3>
+                    <span>Pasión por el voleibol</span>
+                </article>
+
+            </div>
+
         </section>
 
     </main>
@@ -771,7 +931,7 @@
         </p>
 
         <p>
-            © 2026 Voleibol Honduras. Todos los derechos reservados.
+            ©️ 2026 Voleibol Honduras. Todos los derechos reservados.
         </p>
     </footer>
 
